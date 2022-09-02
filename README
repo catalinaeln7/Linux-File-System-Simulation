@@ -1,0 +1,44 @@
+POPA CATALINA-ELENA 325CA
+
+Voi descrie pe scurt logica fiecarei functii:
+
+main: Este creat directorul home. Sunt citite liniile intregi, iar prin
+intermediul functiei choose_command este identificata comanda si ii este
+atribuit un numar.
+
+touch: Este creat un nod de tip file si se fac legaturile in lista de
+fisiere. Se face legatura intre directorul parinte si lista.
+
+mkdir: Este creat un nod de tip dir si se fac legaturile in lista de
+directoare. Se face legatura intre directorul parinte si lista.
+
+ls: Sunt parcurse si afisate nodurile din listele de fisiere si directoare.
+
+rm: Se identifica fisierul care va fi sters, se refac legaturile in lista si se
+elibereaza memoria pentru acel fisier.
+
+rmdir: Se identifica directorul care va fi sters, se refac legaturile in lista
+si se apeleaza functia rmdir_recursive care elibereaza recursiv memoria pentru
+toate fisierele si directoarele din acel director.
+
+cd: In cazul in care e folosit sirul "..", directorul curent nu se va modifica
+daca este home. Altfel, se trece la directorul parinte. Daca se da ca parametru
+numele unui director, acesta este cautat intre directoarele copil ale 
+directorului curent.
+
+pwd: Se creeaza o lista simplu inlantuita care sa retina numele din path pana
+la radacina, nodurile adaugandu-se la inceput. Apoi, creeaza numele final al
+path-ului din nodurile listei.
+
+stop: Se ajunge in home, iar de acolo se da rmdir_recursive pe toate
+directoarele si se sterg toate fisierele.
+
+tree: Se cauta recursiv si se afiseaza corespunzator toate directoarele pana la
+ultimul director care nu mai contine alte directoare, iar apoi se afiseaza
+fisierele.
+
+mv: Se verifica daca exista fisierul/directorul cautat. Se verifica daca exista
+deja un alt fisier/director cu acelasi nume. Daca nu exista deja, sunt facute
+modificarile de nume si legaturi in lista inlantuita.
+
+Pentru fiecare caz particular este facuta afisarea corespunzatoare.
