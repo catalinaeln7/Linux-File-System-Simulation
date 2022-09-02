@@ -1,7 +1,3 @@
-POPA CATALINA-ELENA 325CA
-
-Voi descrie pe scurt logica fiecarei functii:
-
 main: Este creat directorul home. Sunt citite liniile intregi, iar prin
 intermediul functiei choose_command este identificata comanda si ii este
 atribuit un numar.
